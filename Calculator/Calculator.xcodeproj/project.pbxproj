@@ -3,27 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		950B5DB32501276500E5D2CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B5DB22501276500E5D2CD /* AppDelegate.swift */; };
-		950B5DB52501276500E5D2CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B5DB42501276500E5D2CD /* SceneDelegate.swift */; };
 		950B5DB72501276500E5D2CD /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B5DB62501276500E5D2CD /* CalculatorViewController.swift */; };
 		950B5DBA2501276500E5D2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950B5DB82501276500E5D2CD /* Main.storyboard */; };
 		950B5DBC2501276900E5D2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950B5DBB2501276900E5D2CD /* Assets.xcassets */; };
 		950B5DBF2501276A00E5D2CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950B5DBD2501276A00E5D2CD /* LaunchScreen.storyboard */; };
+		950B5DCB25026FA500E5D2CD /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B5DCA25026FA500E5D2CD /* Calculator.swift */; };
+		951D29392514F1E30052541B /* ExpressionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951D29382514F1E30052541B /* ExpressionOperator.swift */; };
+		951D8BF92504E3A100C2E530 /* MathParser in Frameworks */ = {isa = PBXBuildFile; productRef = 951D8BF82504E3A100C2E530 /* MathParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		950B5DAF2501276500E5D2CD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		950B5DB22501276500E5D2CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		950B5DB42501276500E5D2CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		950B5DB62501276500E5D2CD /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		950B5DB92501276500E5D2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		950B5DBB2501276900E5D2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		950B5DBE2501276A00E5D2CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		950B5DC02501276A00E5D2CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950B5DCA25026FA500E5D2CD /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		951D29382514F1E30052541B /* ExpressionOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionOperator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951D8BF92504E3A100C2E530 /* MathParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +62,38 @@
 			children = (
 				950B5DB22501276500E5D2CD /* AppDelegate.swift */,
 				950B5DB82501276500E5D2CD /* Main.storyboard */,
+				951D8B7D2504DD5400C2E530 /* Controller */,
+				951D8B7C2504DD2F00C2E530 /* Model */,
+				951D8B7E2504DD5C00C2E530 /* Support */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		951D8B7C2504DD2F00C2E530 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				950B5DCA25026FA500E5D2CD /* Calculator.swift */,
+				951D29382514F1E30052541B /* ExpressionOperator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		951D8B7D2504DD5400C2E530 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				950B5DB62501276500E5D2CD /* CalculatorViewController.swift */,
-				950B5DB42501276500E5D2CD /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		951D8B7E2504DD5C00C2E530 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				950B5DBB2501276900E5D2CD /* Assets.xcassets */,
 				950B5DBD2501276A00E5D2CD /* LaunchScreen.storyboard */,
 				950B5DC02501276A00E5D2CD /* Info.plist */,
 			);
-			path = Calculator;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +112,9 @@
 			dependencies = (
 			);
 			name = Calculator;
+			packageProductDependencies = (
+				951D8BF82504E3A100C2E530 /* MathParser */,
+			);
 			productName = Calculator;
 			productReference = 950B5DAF2501276500E5D2CD /* Calculator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +143,9 @@
 				Base,
 			);
 			mainGroup = 950B5DA62501276500E5D2CD;
+			packageReferences = (
+				951D8BF72504E3A100C2E530 /* XCRemoteSwiftPackageReference "DDMathParser" */,
+			);
 			productRefGroup = 950B5DB02501276500E5D2CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +175,8 @@
 			files = (
 				950B5DB72501276500E5D2CD /* CalculatorViewController.swift in Sources */,
 				950B5DB32501276500E5D2CD /* AppDelegate.swift in Sources */,
-				950B5DB52501276500E5D2CD /* SceneDelegate.swift in Sources */,
+				950B5DCB25026FA500E5D2CD /* Calculator.swift in Sources */,
+				951D29392514F1E30052541B /* ExpressionOperator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QP62X62JT;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = Calculator/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QP62X62JT;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = Calculator/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		951D8BF72504E3A100C2E530 /* XCRemoteSwiftPackageReference "DDMathParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davedelong/DDMathParser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		951D8BF82504E3A100C2E530 /* MathParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 951D8BF72504E3A100C2E530 /* XCRemoteSwiftPackageReference "DDMathParser" */;
+			productName = MathParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 950B5DA72501276500E5D2CD /* Project object */;
 }
