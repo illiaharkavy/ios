@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9552D004258140100047A4C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552D003258140100047A4C7 /* User.swift */; };
+		9552D00B258162030047A4C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552D00A258162030047A4C7 /* GameViewController.swift */; };
+		9552D0232581657E0047A4C7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552D0222581657E0047A4C7 /* UIViewController.swift */; };
 		95B0A4E42566D5F80085E689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0A4E32566D5F80085E689 /* AppDelegate.swift */; };
-		95B0A4E82566D5F80085E689 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0A4E72566D5F80085E689 /* ViewController.swift */; };
+		95B0A4E82566D5F80085E689 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0A4E72566D5F80085E689 /* QuizViewController.swift */; };
 		95B0A4EB2566D5F80085E689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B0A4E92566D5F80085E689 /* Main.storyboard */; };
 		95B0A4ED2566D5FB0085E689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B0A4EC2566D5FB0085E689 /* Assets.xcassets */; };
 		95B0A4F02566D5FB0085E689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B0A4EE2566D5FB0085E689 /* LaunchScreen.storyboard */; };
@@ -20,9 +23,12 @@
 
 /* Begin PBXFileReference section */
 		6D9B3846C31B964FEF8A0921 /* Pods-Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz.release.xcconfig"; path = "Target Support Files/Pods-Quiz/Pods-Quiz.release.xcconfig"; sourceTree = "<group>"; };
+		9552D003258140100047A4C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9552D00A258162030047A4C7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9552D0222581657E0047A4C7 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		95B0A4E02566D5F80085E689 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B0A4E32566D5F80085E689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95B0A4E72566D5F80085E689 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95B0A4E72566D5F80085E689 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		95B0A4EA2566D5F80085E689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95B0A4EC2566D5FB0085E689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B0A4EF2566D5FB0085E689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +69,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9552CFEA258125F60047A4C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95B0A5FE256ED3BB0085E689 /* Question.swift */,
+				9552D003258140100047A4C7 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9552CFEC258125FE0047A4C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95B0A4E72566D5F80085E689 /* QuizViewController.swift */,
+				9552D00A258162030047A4C7 /* GameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9552D025258165870047A4C7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9552D0222581657E0047A4C7 /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		95B0A4D72566D5F80085E689 = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				95B429D22581237800AA7CD6 /* View */,
-				95B0A4E72566D5F80085E689 /* ViewController.swift */,
-				95B0A5FE256ED3BB0085E689 /* Question.swift */,
+				9552CFEC258125FE0047A4C7 /* Controller */,
+				9552CFEA258125F60047A4C7 /* Model */,
+				9552D025258165870047A4C7 /* Extension */,
 				95B429CC2581233400AA7CD6 /* Support */,
 			);
 			path = Quiz;
@@ -228,9 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B0A4E82566D5F80085E689 /* ViewController.swift in Sources */,
+				9552D0232581657E0047A4C7 /* UIViewController.swift in Sources */,
+				95B0A4E82566D5F80085E689 /* QuizViewController.swift in Sources */,
 				95B0A5FF256ED3BB0085E689 /* Question.swift in Sources */,
 				95B0A4E42566D5F80085E689 /* AppDelegate.swift in Sources */,
+				9552D004258140100047A4C7 /* User.swift in Sources */,
+				9552D00B258162030047A4C7 /* GameViewController.swift in Sources */,
 				95B0A5FB256EC6880085E689 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +417,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QP62X62JT;
-				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_FILE = Quiz/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,7 +438,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QP62X62JT;
-				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_FILE = Quiz/Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
